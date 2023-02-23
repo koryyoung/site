@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kory Young</title>
+    <link rel="icon" href="images/kory-logo-b.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
+    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="k-nav-top" class="homepage">
+            <div class="k-hamenu">
+                <div id="logo-name">
+                    <a id="to-top" href="#top">
+                        <div class="logo">
+                            <img src="images/kory-logo-b.png" alt="">
+                        </div>
+                    </a>
+                    <h1>KORY<br>YOUNG</h1>
+                </div>
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div id="nav-wrap">
+                <ul id="k-nav">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="k-banner">
+            <div class="k-banner-logo">
+                <img src="images/kory-banner-b.png" id="banner-pri" alt="">
+                <img src="images/kory-banner-b.png" id="banner-sec" alt="">
+                <img src="images/kory-banner-w.png" id="banner-tri" alt="" >
+            </div>
+        </div>
+        <div class="home">
+            <div class="home-title">
+                <h1 id="web">WEB</h1>
+                <h1 id="ui">UI/UX</h1>
+                <h1 id="logo">LOGO</h1>
+                <h1 id="design">DESIGN</h1>
+            </div>
+            <i class="fa-solid fa-circle-arrow-down home-arrow fa-4x"></i>
+        </div>
+        <div class="k-intro">
+            <div class="k-container">
+                <div class="k-intro-grid">
+                    <a href="about.html">
+                        <img class="k-intro-icon reveal" src="images/kory-portrait-sm.jpg" alt="Kory Young">
+                    </a>
+                    <h2>Kory Young</h2>
+                    <h1>WEB DESIGNER</h1>
+                    <p class="reveal">
+                        I'm a freelance designer specializing in web design.<br>
+                        Let me build you the perfect website or logo for your brand.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="k-portfolio">
+            <div id="wide">
+                <h1>WORK</h1>
+                <div class="k-portfolio-scroll">
+                    <div class="k-portfolio-element primary">
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="k-portfolio-element secondary">
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                        <div class="">
+                            <img src="images/placeholder.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="k-contact">
+            <div class="k-contact-grid">
+                <h1>CONTACT</h1>
+                <div class="k-contact-email">
+                    <h3>Email</h3>
+                    <p>KORYYOUNG07@GMAIL.COM</p>
+                </div>
+                <div class="k-contact-phone">
+                    <h3>Phone</h3>
+                    <p>(123) 456-7890</p>
+                </div>
+            </div>
+            <div class="sm-icons">
+                <a href="mailto:koryyoung07@gmail.com"><i class="fa-regular fa-envelope fa-4x icon-box"></i></a>
+                <a href="https://www.instagram.com/bbyunghwan/"><i class="fa-brands fa-instagram fa-4x icon-box"></i></a>
+                <a href="https://www.linkedin.com/in/kory-young/"><i class="fa-brands fa-linkedin fa-4x icon-box"></i></a>
+            </div>
+        </div>
+        <div class="k-footer">
+            <p>&copy; 2023 Kory Young</p>
+        </div>
+    </main>
+    <script>
+        // Variables
+        var hamburger = document.querySelector(".hamburger")
+        var nav = document.querySelector("#k-nav")
+        var navWrap = document.querySelector("#nav-wrap")
+        var toTop = document.querySelector("#logo-name")
+        var navHide = document.querySelector("#k-nav-top")
+        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    
+        //On click of hamburger menu
+        hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("is-active");
+            nav.classList.toggle("open");
+            navWrap.classList.toggle("open");
+            toTop.classList.toggle("close");
+        });
+    
+        //Back to top on click
+        toTop.addEventListener("click", function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+        
+    
+        /*
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh) {
+                navHide.style.display = "block";
+            } else {
+                navHide.style.display = "none";
+            }
+        }
+        */
+    
+        //Reveal on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+    
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+    
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+    
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>
