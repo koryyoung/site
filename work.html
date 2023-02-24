@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Work</title>
     <link rel="icon" href="images/kory-logo-b.png">
     <link rel="stylesheet" href="css/reset.css">
@@ -13,17 +13,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
+    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav id="k-nav-top">
             <div class="k-hamenu">
-                <a id="to-top" href="index.html">
-                    <div class="logo">
-                        <img src="images/kory-logo-b.png" class="logo-dehover" alt="">
-                    </div>
-                </a>
+                <div id="logo-name">
+                    <a id="to-top" href="index.html">
+                        <div class="logo">
+                            <img src="images/kory-logo-b.png" alt="">
+                        </div>
+                    </a>
+                    <h1>KORY<br>YOUNG</h1>
+                </div>
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -44,24 +48,34 @@
             <h1>WORK</h1>
         </div>
         <div class="work-display">
-            <a href="work.html" class="work-image">
-                <img src="images/work2.jpg" alt="">
+            <div class="work-image">
+                <img src="images/work1.png" alt="">
                 <h3 class="hover-text">pouaiie</h3>
-            </a>
-            <a class="work-image">
-                <img src="images/placeholder.jpg" alt="">
-                <h3 class="hover-text">placeholder 2</h3>
-            </a>
-            <a class="work-image">
-                <img src="images/placeholder.jpg" alt="">
-                <h3 class="hover-text">placeholder 3</h3>
-            </a>
-            <a class="work-image">
-                <img src="images/placeholder.jpg" alt="">
-                <h3 class="hover-text">placeholder 4</h3>
-            </a>
+                <a href="work.html">Visit Site</a>
+            </div>
+            <div class="work-image">
+                <img src="images/work2.png" alt="">
+                <h3 class="hover-text">Keyboards</h3>
+                <a href="work.html">Visit Site</a>
+            </div>
+            <div class="work-image">
+                <img src="images/work3.png" alt="">
+                <h3 class="hover-text">Personal Logo</h3>
+                <a href="work.html">View Full</a>
+            </div>
+        </div>
+        <div class="pdfs">
+            <a href="images/YoungKoryResume.pdf">RESUME</a>
+            <a href="">CV</a>
         </div>
         <div class="k-footer">
+            <div class="sm-icons-ft">
+            <a href="mailto:koryyoung07@gmail.com"><i class="fa-regular fa-envelope fa-2x icon-box"></i></a>
+            <a href="https://www.instagram.com/bbyunghwan/" target="_blank"><i
+                    class="fa-brands fa-instagram fa-2x icon-box"></i></a>
+            <a href="https://www.linkedin.com/in/kory-young/" target="_blank"><i
+                    class="fa-brands fa-linkedin fa-2x icon-box"></i></a>
+        </div>
             <p>&copy; 2023 Kory Young</p>
         </div>
     </main>
@@ -69,23 +83,13 @@
         var hamburger = document.querySelector(".hamburger")
         var nav = document.querySelector("#k-nav")
         var navWrap = document.querySelector("#nav-wrap")
-        var toTop = document.querySelector("#to-top")
-        var workImage = document.querySelector(".work-image")
-        var hoverText = document.querySelector(".hover-text")
+        var toTop = document.querySelector("#logo-name")
     
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("is-active");
             nav.classList.toggle("open");
             navWrap.classList.toggle("open");
             toTop.classList.toggle("close");
-        });
-    
-        workImage.addEventListener("mouseover", function() {
-            hoverText.classList.toggle("hovered");
-        });
-    
-        workImage.addEventListener("mouseout", function() {
-            hoverText.classList.toggle("hovered");
         });
         
     </script>

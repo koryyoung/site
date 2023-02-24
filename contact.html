@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Contact</title>
     <link rel="icon" href="images/kory-logo-b.png">
     <link rel="stylesheet" href="css/reset.css">
@@ -20,11 +20,14 @@
     <header>
         <nav id="k-nav-top">
             <div class="k-hamenu">
-                <a id="to-top" href="index.html">
-                    <div class="logo">
-                        <img src="images/kory-logo-b.png" class="logo-dehover" alt="">
-                    </div>
-                </a>
+                <div id="logo-name">
+                    <a id="to-top" href="index.html">
+                        <div class="logo">
+                            <img src="images/kory-logo-b.png" alt="">
+                        </div>
+                    </a>
+                    <h1>KORY<br>YOUNG</h1>
+                </div>
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -43,7 +46,7 @@
     <main>
         <div class="k-con-container">
             <h1>CONTACT</h1>
-            <form action="" class="k-form">
+            <form method="post" action="form.php" class="k-form">
                 <div id="name" class="k-form-section">
                     <label for="name1">Full Name</label>
                     <input type="text" name="name" class="input-form" id="name1" placeholder="Kory Young">
@@ -63,9 +66,9 @@
             </form>
             <div class="sm-icons">
                 <a href="mailto:koryyoung07@gmail.com"><i class="fa-regular fa-envelope fa-4x icon-box"></i></a>
-                <a href="https://www.instagram.com/bbyunghwan/"><i
+                <a href="https://www.instagram.com/bbyunghwan/" target="_blank"><i
                         class="fa-brands fa-instagram fa-4x icon-box"></i></a>
-                <a href="https://www.linkedin.com/in/kory-young/"><i
+                <a href="https://www.linkedin.com/in/kory-young/" target="_blank"><i
                         class="fa-brands fa-linkedin fa-4x icon-box"></i></a>
             </div>
         </div>
@@ -77,7 +80,7 @@
         var hamburger = document.querySelector(".hamburger")
         var nav = document.querySelector("#k-nav")
         var navWrap = document.querySelector("#nav-wrap")
-        var toTop = document.querySelector("#to-top")
+        var toTop = document.querySelector("#logo-name")
 
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("is-active");

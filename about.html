@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>About</title>
     <link rel="icon" href="images/kory-logo-b.png">
     <link rel="stylesheet" href="css/reset.css">
@@ -13,19 +13,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
+    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav id="k-nav-top">
             <div class="k-hamenu">
-                <div class="logo-name">
+                <div id="logo-name">
                     <a id="to-top" href="index.html">
                         <div class="logo">
-                            <img src="images/kory-logo-b.png" class="logo-dehover" alt="">
+                            <img src="images/kory-logo-b.png" alt="">
                         </div>
                     </a>
-                    <h1>Kory<br>Young</h1>
+                    <h1>KORY<br>YOUNG</h1>
                 </div>
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
@@ -52,13 +53,20 @@
             </h2>
             <img src="images/kory-portrait.jpg" alt="">
             <p class="reveal">
-                Hey there! I'm a Web Designer and Developer based in Cincinnati. I graduated from UCBA with a degree in Applied Media Communications, specializing in Electronic Design and Web Production. I'm also pretty handy with Graphic Design, so if you need a cool brand or logo, I've got you covered. I love design because it's a creative outlet that lets me express myself in different ways.
+                Hey there! I'm a Web Designer and Developer based in Cincinnati. I graduated from UCBA with a degree in Applied Media Communications, specializing in Electronic Design and Web Production. I'm also pretty handy with Graphic Design, so if you need a cool brand or logo, I've got you covered.
             </p>
             <p class="reveal">
-                When I'm not working, I enjoy indulging in my hobbies such as playing and listening to music, gaming with my friends, and experimenting with new recipes in the kitchen. Art is a major interest of mine, and I love checking out all the unique ways people express themselves through their art.
+                When I'm not working, I enjoy indulging in my hobbies like playing and listening to music, gaming with my friends, and experimenting with new recipes in the kitchen. Art is a major interest of mine, and I love checking out all the unique ways people express themselves through their medium.
             </p>
         </div>
         <div class="k-footer">
+            <div class="sm-icons-ft">
+                <a href="mailto:koryyoung07@gmail.com"><i class="fa-regular fa-envelope fa-2x icon-box"></i></a>
+                <a href="https://www.instagram.com/bbyunghwan/" target="_blank"><i
+                        class="fa-brands fa-instagram fa-2x icon-box"></i></a>
+                <a href="https://www.linkedin.com/in/kory-young/" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-2x icon-box"></i></a>
+            </div>
             <p>&copy; 2023 Kory Young</p>
         </div>
     </main>
@@ -66,7 +74,7 @@
         var hamburger = document.querySelector(".hamburger")
         var nav = document.querySelector("#k-nav")
         var navWrap = document.querySelector("#nav-wrap")
-        var toTop = document.querySelector("#to-top")
+        var toTop = document.querySelector("#logo-name")
     
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("is-active");
