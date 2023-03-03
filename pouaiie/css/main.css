@@ -1,0 +1,434 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #fafafa;
+   min-height: 100vh;
+   margin: 0;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   font-family: sans-serif;
+   overflow-y: scroll;
+   font-family: 'Lato', sans-serif;
+   color: #484848;
+}
+
+/* IMAGES */
+
+/* HEADER */
+header {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 20em;
+   align-items: center;
+   min-height: 50px;
+   max-width: 60%;
+   margin: 0 auto;
+}
+
+.icon-name {
+   display: flex;
+   align-items: center;
+   color: #ffb8cf;
+   font-size: 200%;
+   text-decoration: none;
+   margin: 1em;
+   font-family: 'Fredoka One', cursive;
+}
+
+.icon-name img {
+   max-width: 75px;
+}
+
+.icon-name:hover {
+   color: #ffb8cf;
+}
+
+/* NAV BAR */
+nav {
+   padding: 3em;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-between;
+   grid-gap: 1.5em;
+}
+
+nav li {
+   list-style-type: none;
+}
+
+nav a {
+   text-decoration: none;
+   color: #484848;
+   opacity: 65%;
+}
+
+.nav-active {
+   opacity: 100%;
+}
+
+nav a:hover {
+   color: #ffb8cf;
+   opacity: 100%;
+}
+
+header nav li a {
+   transition: all .75s ease;
+   display: block;
+   padding: .75em 1em;
+   border-radius: 2em;
+}
+
+header nav li a:hover,
+header input.menu-btn:hover {
+   color: #ffb8cf;
+}
+
+header input.menu-btn,
+header label.menu-icon {
+   display: none; /* ← hides hamburger icon */
+}
+
+/* MAIN */
+h1 {
+   color: #ffb8cf;
+   font-size: 150%;
+   text-transform: uppercase;
+   font-family: "Fredoka One";
+}
+
+/* ABOUT MAIN */
+.about-bio {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.about-bio img {
+   margin-top: 2em;
+   max-width: 250px;
+   border-radius: 125px;
+}
+
+.about-bio h1 {
+   margin: 1em;
+}
+
+.about-bio p {
+   margin: 1em;
+   max-width: 60%;
+   text-align: center;
+}
+
+/* PORTFOLIO MAIN */
+.portfolio-h1 {
+   text-align: center;
+   padding: 1em;
+
+}
+
+.portfolio-gallery {
+   max-width: 60%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-gap: .25em;
+   padding: 1em 0;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+}
+
+.portfolio-gallery img {
+   width: 100%;
+   height: 400px;
+   object-fit: cover;
+}
+
+/* FAQ MAIN */
+.faq-info {
+   max-width: 60%;
+   margin: 0 auto;
+}
+
+.faq-header {
+   text-align: center;
+   padding: 1em;
+   margin-bottom: 4em;
+}
+
+.faq-cat {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+}
+
+.faq-cat h2 {
+   text-transform: uppercase;
+}
+
+.faq-question {
+   list-style: none;
+   font-weight: bold;
+}
+
+.faq-answer {
+   margin-left: 40px;
+   font-weight: normal;
+}
+
+.faq-answer h2 {
+   padding-bottom: .25em;
+}
+
+/* CONTACT FORM */
+.contact-main {
+   background-color: #ffb8cf;
+   max-width: 60%;
+   margin: 1em auto;
+   border-radius: .75em;
+}
+
+.contact-main h1 {
+   color: #fafafa;
+   text-align: center;
+   padding-top: .5em;
+   font-size: 175%;
+}
+
+.contact-main ul {
+  list-style: none;
+  width: 40%;
+  margin: 0 auto;
+  padding: .5em;
+}
+
+.contact-main li {
+   margin: .5em;
+   display: block;
+}
+
+input, textarea {
+   width: 100%;
+   border: 2px solid #fafafa;
+   border-radius: 4px;
+   outline: none;
+   background-color: #fafafa;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid #c0c0c0;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+button {
+   width: 100%;
+   background-color: #fafafa;
+   color: #ffb8cf;
+   border-radius: 4px;
+   border: 0px;
+   padding: .5em;
+   font-weight: bolder;
+   width: 25%;
+   font-family: "Fredoka One";
+}
+
+/* FOOTER */
+footer {
+   text-align: center;
+   min-height: 50px;
+}
+
+footer p {
+   padding-top: 1em;
+   font-size: 80%;
+}
+
+footer ul {
+   display: flex;
+   justify-content: center;
+   list-style-type: none;
+   padding-bottom: 1em;
+}
+
+footer li {
+   margin: 0 .5em;
+   
+}
+
+footer a {
+   text-decoration: none;
+   color: #ffb8cf;
+   font-size: 125%;
+   padding: 0 .25em;
+}
+
+footer a:hover {
+   color: #ffb8cf;
+   opacity: 70%;
+}
+
+/* CAROUSEL MAIN */
+.main-gallery {
+   max-width: 60%;
+   margin: 2em auto;
+}
+
+.carousel-item {
+   max-height: 600px;
+}
+
+/* TABLET QUERY */
+@media (max-width: 810px) {
+
+   header {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      grid-gap: 0;
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+   }
+
+   nav {
+      margin: 0;
+      padding: 0;
+   }
+
+   nav ul {
+      margin: 0;
+      padding: 0;
+   }
+
+   header nav ul.menu {
+      max-height: 0; /* ← hides menu until opened */
+      transition: max-height .5s ease-out; /* ← open speed */
+      text-align: center;
+      flex-direction: column;
+   }
+
+   main {
+      padding: 0;
+      margin: 0;
+   }
+
+   .main-gallery {
+      max-width: 100vh;
+      margin: 0;
+   }
+
+   .portfolio-gallery {
+      max-width: 100vh;
+      grid-template-columns: 1fr 1fr;
+   }
+   
+   .about-bio p {
+      max-width: 90%;
+   }
+
+   .faq-info {
+      max-width: 90%;
+   }
+
+   .contact-main {
+      max-width: 95%;
+   }
+
+   .contact-main ul {
+      width: 100%;
+   }
+   
+   input {
+      padding: .25em .1em;
+   }
+   
+      /* Hamburger Icon 
+   -------------------------------------*/
+   header label.menu-icon {
+      display: inline-block;
+      padding: 20px 20px;
+      position: absolute;
+      right: 3px; /* ← horizontal position */
+      top: 40px; /* ← vertical position */
+   }
+
+   /* ↓ center hamburger line ↓ */
+   header label.menu-icon span.navicon {
+      display: block;
+      position: relative;
+      transition: all .2s ease-out;
+      height: 5px; /* ← thickness of lines */
+      width: 25px; /* ← width of lines */
+      background: #ffb8cf; /* ← icon color */
+   }
+
+   /* ↓ top & bottom hamburger line ↓ */
+   header label.menu-icon .navicon:before,
+   header label.menu-icon .navicon:after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all .3s ease-out;
+      background: #ffb8cf; /* ← icon color */
+   }
+
+   header label.menu-icon .navicon:before {
+      top: 9px; /* ← space below top line */
+   }
+
+   header label.menu-icon .navicon:after {
+      top: -9px; /* ← space above bottom line */
+   }
+
+
+   /* Icon Animation
+   -------------------------------------*/
+   header input.menu-btn:checked ~ ul.menu {
+      max-height: 300px;
+      /* ↑ maximum height of the menu bar ↑
+         increase this if some of your
+         menu links are getting cut off */
+   }
+
+   /* ↓ hides center line for the X ↓ */
+   header input.menu-btn:checked ~ label.menu-icon span.navicon {
+      background: transparent;
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon span.navicon:before {
+      transform: rotate(-45deg);
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon span.navicon:after {
+      transform: rotate(45deg);
+   }
+
+   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:before,
+   header input.menu-btn:checked ~ label.menu-icon:not(.steps) .navicon:after {
+      top: 0;
+   }
+
+}
+
+/* PHONE QUERY */
+@media (max-width: 428px) {
+
+   header {
+      display: flex;
+      align-items: center;
+   }
+
+   .portfolio-gallery {
+      grid-template-columns: 1fr;
+   }
+   
+}

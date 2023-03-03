@@ -5,29 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>About</title>
-    <link rel="icon" href="images/kory-logo-b.png">
+    <title>ABOUT | Kory Young</title>
+    <link rel="icon" href="images/kory-logo-w.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/sprite_60fps.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
-    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <svg id="cover"></svg>
     <header>
-        <nav id="k-nav-top">
+        <nav id="navbar">
+            <div id="logo-name">
+                <a href="index.html">
+                    <div class="logo">
+                        <div class="shapeshifter play" style="background-image: url(images/logo-ani.svg)"></div>
+                    </div>
+                </a>
+                <h1>KORY<br>YOUNG</h1>
+            </div>
             <div class="k-hamenu">
-                <div id="logo-name">
-                    <a id="to-top" href="index.html">
-                        <div class="logo">
-                            <img src="images/kory-logo-b.png" alt="">
-                        </div>
-                    </a>
-                    <h1>KORY<br>YOUNG</h1>
-                </div>
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -36,7 +37,7 @@
             </div>
             <div id="nav-wrap">
                 <ul id="k-nav">
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><span>ABOUT</span></li>
                     <li><a href="work.html">WORK</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
@@ -44,20 +45,27 @@
         </nav>
     </header>
     <main>
+        <div class="transition-cover"></div>
         <div class="k-about-container">
             <h1>About</h1>
-            <h2>
-                Hello,<br>
-                I'm <br>
-                Kory
-            </h2>
+            <div id="greet">
+                <h2>Hello,</h2>
+                <h2>I'm</h2>
+                <h2>Kory</h2>
+            </div>
             <img src="images/kory-portrait.jpg" alt="">
-            <p class="reveal">
-                Hey there! I'm a Web Designer and Developer based in Cincinnati. I graduated from UCBA with a degree in Applied Media Communications, specializing in Electronic Design and Web Production. I'm also pretty handy with Graphic Design, so if you need a cool brand or logo, I've got you covered.
-            </p>
-            <p class="reveal">
-                When I'm not working, I enjoy indulging in my hobbies like playing and listening to music, gaming with my friends, and experimenting with new recipes in the kitchen. Art is a major interest of mine, and I love checking out all the unique ways people express themselves through their medium.
-            </p>
+            <div id="bio">
+                <p class="reveal">
+                    Hey there! I'm a Web Designer and Developer based in Cincinnati. I graduated from UCBA with a degree in
+                    Applied Media Communications, specializing in Electronic Design and Web Production. I'm also pretty
+                    handy with Graphic Design, so if you need a cool brand or logo, I've got you covered.
+                </p>
+                <p class="reveal">
+                    When I'm not working, I enjoy indulging in my hobbies like playing and listening to music, gaming with
+                    my friends, and experimenting with new recipes in the kitchen. Art is a major interest of mine, and I
+                    love checking out all the unique ways people express themselves through their medium.
+                </p>
+            </div>
         </div>
         <div class="k-footer">
             <div class="sm-icons-ft">
@@ -70,35 +78,9 @@
             <p>&copy; 2023 Kory Young</p>
         </div>
     </main>
-    <script>
-        var hamburger = document.querySelector(".hamburger")
-        var nav = document.querySelector("#k-nav")
-        var navWrap = document.querySelector("#nav-wrap")
-        var toTop = document.querySelector("#logo-name")
-    
-        hamburger.addEventListener("click", function () {
-            hamburger.classList.toggle("is-active");
-            nav.classList.toggle("open");
-            navWrap.classList.toggle("open");
-            toTop.classList.toggle("close");
-        });
-    
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-    
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50;
-    
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/subpage.js"></script>
+    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

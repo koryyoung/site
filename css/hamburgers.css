@@ -20,6 +20,7 @@
   padding: 0;
   max-width: 40px;
   overflow: visible;
+  margin-right: 10px;
 }
 
 .hamburger:hover {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="slippry.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="slippry.min.js"></script>
+    <title>Keyboards</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="index.html">Keyboards</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="switch.html">Switches</a></li>
+                    <li><a href="case.html">Cases</a></li>
+                    <li><a href="keycap.html">Keycaps</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="text">
+                <div id="ct">
+                    <div class="corner "id="left_top"></div>
+                    <div class="corner" id="left_bottom"></div>
+                    <div class="corner" id="right_top"></div>
+                    <div class="corner" id="right_bottom"></div>
+                    <span>Taeha Kim</span>
+                    <blockquote>
+                      <p><i>&ldquo;The keyboard, a tool that each and every one of us interacts with daily. We probably spend as much time on a keyboard as we do on our phones and while we are constantly looking to own the next flagship device, few look to enhance their typing experiences. The keyboard is often overlooked, possibly never considered by most as something worth investing in.&rdquo; </i></p>
+                    </blockquote>
+                </div>
+            </section>
+        <div class="slider">
+            <ul class="slippry">               
+              <li>
+                  <img src="img/Infinitum.jpg" alt="Infinitum Keyboard with ePBT Sushi Keycaps">
+              </li>        
+              <li>
+                  <img src="img/7V.jpg" alt="7V Keyboard with GMK Minimal Keycaps">
+              </li>          
+              <li>
+                  <img src="img/ModeEighty.jpg" alt="Mode Eighty Keyboard with GMK Oblivion Keycaps">
+              </li>           
+              <li>
+                  <img src="img/Space65.jpeg" alt="Space65 Keyboard with GMK Ascii Keycaps">
+              </li>            
+              <li>
+                  <img src="img/Norbaforce.jpg" alt="Norbaforce Keyboard with GMK Peach Blossom Keycaps">
+              </li> 
+            </ul>
+        </div>
+        <script>
+            $("document").ready(function(){
+                $(".slippry").slippry();
+            });
+        </script>
+        <section class="text">
+            <p>
+                This is a beginner's guide to the world of custom keyboards. It'll go into each of the main parts that make up a custom keyboard so you can start picking and choosing how you want your board to look and feel. There is so much more to keyboards that what will be talked about and shown on this page, so go and explore and find your "End Game".
+            </p>
+        </section>
+        </main>
+
+        <footer>
+            footer content
+        </footer>
+    </div>
+</body>
+</html>

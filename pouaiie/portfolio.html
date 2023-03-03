@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>pouaiie</title>
+   <link rel="icon" href="images/logo.png">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   <link rel="stylesheet" href="css/fancybox.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato&display=swap" rel="stylesheet"> 
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/fancybox.js"></script>
+</head>
+<body>
+   <header>
+      <a class="icon-name" href="index.html"><img src="images/logo.png" alt="">POUAIIE</a>
+      <nav>
+         <input class="menu-btn" type="checkbox" id="menu-btn">
+
+         <label class="menu-icon" for="menu-btn">
+             <span class="navicon"></span>
+         </label>
+         <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="portfolio.html" class="nav-active">PORTFOLIO</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <h1 class="portfolio-h1">ILLUSTRATIONS</h1>
+      <div class="portfolio-gallery">
+         <a href="images/artwork-1.jpg" class="fancybox"><img src="images/artwork-1.jpg" alt=""></a>
+         <a href="images/artwork-2.png" class="fancybox"><img src="images/artwork-2.png" alt=""></a>
+         <a href="images/artwork-3.jpg" class="fancybox"><img src="images/artwork-3.jpg" alt=""></a>
+         <a href="images/artwork-4.jpg" class="fancybox"><img src="images/artwork-4.jpg" alt=""></a>
+         <a href="images/artwork-5.jpg" class="fancybox"><img src="images/artwork-5.jpg" alt=""></a>
+         <a href="images/artwork-6.png" class="fancybox"><img src="images/artwork-6.png" alt=""></a>
+         <a href="images/artwork-7.png" class="fancybox"><img src="images/artwork-7.png" alt=""></a>
+         <a href="images/artwork-8.png" class="fancybox"><img src="images/artwork-8.png" alt=""></a>
+         <a href="images/artwork-9.jpg" class="fancybox"><img src="images/artwork-9.jpg" alt=""></a>
+         <a href="images/artwork-10.jpg" class="fancybox"><img src="images/artwork-10.jpg" alt=""></a>
+      </div>
+   </main>
+
+   <footer>
+      <p>&copy; 2022 pouaiie</p>
+      <ul>
+         <li><a href="#" class="fab fa-instagram"></a></li>
+         <li><a href="#" class="fab fa-twitter"></a></li>
+         <li><a href="#" class="fab fa-tiktok"></a></li>
+         <li><a href="#" class="fa fa-envelope"></a></li>
+      </ul>
+   </footer>
+
+   <script>
+      $(document).ready(function() {
+         $(".fancybox").fancybox();
+      });
+   </script>
+</body>
+</html>

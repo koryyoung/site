@@ -6,28 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Kory Young</title>
-    <link rel="icon" href="images/kory-logo-b.png">
+    <link rel="icon" href="images/kory-logo-w.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="css/sprite_60fps.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
-    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body nload="disableScroll(), enableScroll()">
     <header>
-        <nav id="k-nav-top" class="homepage">
+        <nav class="homepage" id="navbar">
+            <div id="logo-name">
+                <a href="#top">
+                    <div class="logo">
+                        <div class="shapeshifter play" style="background-image: url(images/logo-ani.svg)"></div>
+                    </div>
+                </a>
+                <h1>KORY<br>YOUNG</h1>
+            </div>
             <div class="k-hamenu">
-                <div id="logo-name">
-                    <a id="to-top" href="#top">
-                        <div class="logo">
-                            <img src="images/kory-logo-b.png" alt="">
-                        </div>
-                    </a>
-                    <h1>KORY<br>YOUNG</h1>
-                </div>
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
@@ -46,9 +46,10 @@
     <main>
         <div class="k-banner">
             <div class="k-banner-logo">
-                <img src="images/kory-banner-b.png" id="banner-pri" alt="">
-                <img src="images/kory-banner-b.png" id="banner-sec" alt="">
-                <img src="images/kory-banner-w.png" id="banner-tri" alt="" >
+                <img src="images/kory-banner-l.png" id="banner-l" alt="">
+                <img src="images/kory-banner-r.png" id="banner-r" alt="">
+                <img src="images/kory-banner-t.png" id="banner-t" alt="">
+                <img src="images/kory-banner-b.png" id="banner-b" alt="">
             </div>
         </div>
         <div class="home">
@@ -57,51 +58,58 @@
                 <h1 id="ui">UI/UX</h1>
                 <h1 id="logo">LOGO</h1>
                 <h1 id="design">DESIGN</h1>
+                <a class="home-arrow" id="scroll-down">
+                    <i class="fa-solid fa-circle-arrow-down fa-4x"></i>
+                </a>
             </div>
-            <a class="home-arrow" id="scroll-down">
-                <i class="fa-solid fa-circle-arrow-down fa-4x"></i>
-            </a>
+            <div class="home-image">
+                <img src="images/kory-portrait-slide.png" alt="">
+            </div>
         </div>
         <div class="k-intro">
-            <div class="k-container">
-                <div class="k-intro-grid">
-                    <a href="about.html">
-                        <img class="k-intro-icon reveal" src="images/kory-portrait-sm.jpg" alt="Kory Young">
-                    </a>
-                    <h2>Kory Young</h2>
-                    <h1>WEB DESIGNER</h1>
-                    <p class="reveal">
-                        I'm a freelance designer specializing in web design.<br>
-                        Let me build you the perfect website or logo for your brand.
-                    </p>
-                </div>
+            <div class="k-intro-grid">
+                <a href="about.html">
+                    <img class="k-intro-icon" src="images/kory-portrait-sm.png" alt="Kory Young">
+                </a>
+                <h2>Kory Young</h2>
+                <h1>WEB DESIGNER</h1>
+                <p class="reveal">
+                    I'm a freelance designer specializing in web design.
+                </p>
+                <p class="reveal">
+                    Let me build you the perfect website or logo for your brand.
+                </p>
             </div>
         </div>
         <div class="k-portfolio">
-            <div id="wide">
-                <h1>WORK</h1>
-                <div class="k-portfolio-scroll">
-                    <div class="k-portfolio-element primary">
-                        <div class="">
-                            <a href=""><img src="images/work1.png" alt=""></a>
-                        </div>
-                        <div class="">
-                            <a href=""><img src="images/work2.png" alt=""></a>
-                        </div>
-                        <div class="">
-                            <a href=""><img src="images/work3.png" alt=""></a>
-                        </div>
+            <h1>WORK</h1>
+            <div class="k-portfolio-scroll">
+                <div class="k-portfolio-group primary">
+                    <div class="k-portfolio-element">
+                        <a href="work.html#1"><img src="images/pouaiie-img/pouaiie-3.jpg" alt=""></a>
                     </div>
-                    <div class="k-portfolio-element secondary">
-                        <div class="">
-                            <a href=""><img src="images/work1.png" alt=""></a>
-                        </div>
-                        <div class="">
-                            <a href=""><img src="images/work2.png" alt=""></a>
-                        </div>
-                        <div class="">
-                            <a href=""><img src="images/work3.png" alt=""></a>
-                        </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#4"><img src="images/keyboard-img/keyboard-3.jpg" alt=""></a>
+                    </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#3"><img src="images/graphic-img/graphic-5.jpg" alt=""></a>
+                    </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#2"><img src="images/capstone-img/capstone-4.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="k-portfolio-group secondary">
+                    <div class="k-portfolio-element">
+                        <a href="work.html#1"><img src="images/pouaiie-img/pouaiie-3.jpg" alt=""></a>
+                    </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#4"><img src="images/keyboard-img/keyboard-3.jpg" alt=""></a>
+                    </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#3"><img src="images/graphic-img/graphic-5.jpg" alt=""></a>
+                    </div>
+                    <div class="k-portfolio-element">
+                        <a href="work.html#2"><img src="images/capstone-img/capstone-4.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -110,81 +118,29 @@
             <div class="k-contact-grid">
                 <h1>CONTACT</h1>
                 <div class="k-contact-email">
-                    <h3>Email</h3>
-                    <p>KORYYOUNG07@GMAIL.COM</p>
+                    <h2>Email</h2>
+                    <h3>KORYYOUNG07@GMAIL.COM</h3>
                 </div>
                 <div class="k-contact-phone">
-                    <h3>Phone</h3>
-                    <p>(123) 456-7890</p>
+                    <h2>Phone</h2>
+                    <h3>(123) 456-7890</h3>
                 </div>
             </div>
             <div class="sm-icons">
                 <a href="mailto:koryyoung07@gmail.com"><i class="fa-regular fa-envelope fa-4x icon-box"></i></a>
-                <a href="https://www.instagram.com/bbyunghwan/" target="_blank"><i class="fa-brands fa-instagram fa-4x icon-box"></i></a>
-                <a href="https://www.linkedin.com/in/kory-young/" target="_blank"><i class="fa-brands fa-linkedin fa-4x icon-box"></i></a>
+                <a href="https://www.instagram.com/bbyunghwan/" target="_blank"><i
+                        class="fa-brands fa-instagram fa-4x icon-box"></i></a>
+                <a href="https://www.linkedin.com/in/kory-young/" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-4x icon-box"></i></a>
             </div>
         </div>
         <div class="k-footer">
             <p>&copy; 2023 Kory Young</p>
         </div>
     </main>
-    <script>
-        // Variables
-        var hamburger = document.querySelector(".hamburger")
-        var nav = document.querySelector("#k-nav")
-        var navWrap = document.querySelector("#nav-wrap")
-        var toTop = document.querySelector("#logo-name")
-        var navHide = document.querySelector("#k-nav-top")
-        var scrollDown = document.querySelector("#scroll-down")
-        const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-    
-        //On click of hamburger menu
-        hamburger.addEventListener("click", function () {
-            hamburger.classList.toggle("is-active");
-            nav.classList.toggle("open");
-            navWrap.classList.toggle("open");
-            toTop.classList.toggle("close");
-        });
-    
-        //Back to top on click
-        toTop.addEventListener("click", function () {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        });
-
-        scrollDown.addEventListener("click", function () {
-            window.scrollTo(0, 800);
-        })
-    
-        /*
-        window.onscroll = function () { scrollFunction() };
-        function scrollFunction() {
-            if (document.body.scrollTop > vh || document.documentElement.scrollTop > vh) {
-                navHide.style.display = "block";
-            } else {
-                navHide.style.display = "none";
-            }
-        }
-        */
-    
-        //Reveal on scroll
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-    
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50;
-    
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-    
-        window.addEventListener("scroll", reveal);
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
+    <script src="https://kit.fontawesome.com/4af2dfdd34.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

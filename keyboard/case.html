@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slippry.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="slippry.min.js"></script>
+    <title>Keyboards - Cases</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>
+                <a href="index.html">Keyboards</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="switch.html">Switches</a></li>
+                    <li><a href="case.html">Cases</a></li>
+                    <li><a href="keycap.html">Keycaps</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="text">
+                <h2>
+                    CASES
+                </h2>
+                <p>
+                    Cases are what hold all your parts and are typically the most expensive piece of the build. They come in a multitude of different sizes, but the main five are 60%, 65%, 75%, 80%/TKL, and 96%/1800. While some sizes may be better for certain tasks, chosing a case is more personal preference on things like how much desk space you have or is you want arrow keys or a numpad.
+                    <br>
+                    <br>
+                    Cases and their parts also come in different materials like plastics, carbon fiber, or metals such as aluminum and brass. Different material produce different sounds while typing, due to the acoustics of the inside of the case, and feels, if you bottom out and hit the plate material.
+                </p>
+            </section>
+            <div class="slippry_box thumbnails"></div>
+                <ul id="thumbnails">
+                    <li>
+                        <img src="img/Kara.jpg" alt="KARA - a 60% Keyboard">
+                    </li>                
+                    <li>
+                        <img src="img/HAUS.jpg" alt="HAUS - a 65% Keyboard">
+                    </li>               
+                    <li>
+                        <img src="img/7V2.jpg" alt="7V - a 75% Keyboard">
+                    </li>               
+                    <li>
+                        <img src="img/U80-A.jpg" alt="U80-A - a 80%/TKL Keyboard">
+                    </li>    
+                    <li>
+                        <img src="img/HCBP.jpg" alt="HCBP - a 96%/1800 Keyboard">
+                    </li>             
+                </ul>
+                <section class="thumb-box">
+                  <ul class="thumbs">               
+                    <li>
+                      <a href="#1" data-slide="1">
+                        <img src="img/60.jpg">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#2" data-slide="2">
+                        <img src="img/65.jpg">
+                      </a>
+                    </li>               
+                    <li>
+                      <a href="#3" data-slide="3">
+                        <img src="img/75.jpg">
+                      </a>
+                    </li>                
+                    <li>
+                      <a href="#4" data-slide="4">
+                        <img src="img/80.jpg">
+                      </a>
+                    </li>   
+                    <li>
+                        <a href="#5" data-slide="5">
+                          <img src="img/96.jpg">
+                        </a>
+                      </li>              
+                  </ul>
+                </section><!-- thumb-box -->
+            </div><!-- slippry_box thumbnails -->
+            <script>
+                var thumbs = $('#thumbnails').slippry({
+                  // general elements & wrapper
+                  slippryWrapper: '<div class="slippry_box thumbnails" />',
+                  // options
+                  transition: 'horizontal',
+                  pager: false,
+                  auto: false,
+                  onSlideBefore: function (el, index_old, index_new) {
+                    $('.thumbs a img').removeClass('active');
+                    $('img', $('.thumbs a')[index_new]).addClass('active');
+                  }
+                });
+                
+                $('.thumbs a').click(function () {
+                  thumbs.goToSlide($(this).data('slide'));
+                  return false;
+                });
+            </script>
+        </main>
+
+        <footer>
+            footer content
+        </footer>
+    </div>
+</body>
+</html>
