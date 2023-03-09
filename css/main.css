@@ -926,7 +926,8 @@ nav #k-nav a:hover::after {
     justify-content: center;
     align-items: center;
     z-index: 3;
-    border: 1px solid red;
+    cursor: pointer;
+    background-color: rgba(26, 26, 26, .7);
 }
 
 #g1-l, #g2-l, #g3-l, #g4-l {
@@ -936,7 +937,6 @@ nav #k-nav a:hover::after {
     margin: auto;
     box-shadow: 1rem 1rem 0 0 #d28782;
     display: none;
-    border: 1px solid red;
 }
 
 #g1-s, #g2-s, #g3-s, #g4-s {
@@ -1399,7 +1399,7 @@ nav #k-nav a:hover::after {
     }
 
     .wsub-text h1 {
-        font-size: 675%;
+        font-size: 525%;
     }
 
     .wsub-image-side {
@@ -1815,7 +1815,7 @@ nav #k-nav a:hover::after {
 
     /* WORK SUBPAGE */
     .wsub-text h1 {
-        font-size: 500%;
+        font-size: 385%;
     }
 
     .wsub-text h2 {
@@ -2036,6 +2036,10 @@ nav #k-nav a:hover::after {
 
     .work-image img {
         box-shadow: .75rem .75rem 0 0 #d28782;
+    }
+
+    .work-image h3 {
+        font-size: 150%;
     }
 
     .pdfs {
