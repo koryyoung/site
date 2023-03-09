@@ -74,6 +74,5 @@ function enableScroll() {
         window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
         window.removeEventListener('touchmove', preventDefault, wheelOpt);
         window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-
     }, 4000);
 }

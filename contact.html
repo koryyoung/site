@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/hamburgers.css">
-    <link rel="stylesheet" href="css/sprite_60fps.css" />
+    <link rel="stylesheet" href="css/sprite_60fps.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/aja2mrb.css">
@@ -47,22 +47,27 @@
     <main>
         <div class="k-con-container">
             <h1>CONTACT</h1>
-            <form method="post" action="form.php" class="k-form">
-                <div id="name" class="k-form-section">
-                    <label for="name1">Full Name</label>
-                    <input type="text" name="name" class="input-form" id="name1" placeholder="Kory Young">
+            <form method="" action="" class="k-form" id="reset">
+                <div id="form-input">
+                    <div id="name" class="k-form-section">
+                        <label for="name1">Full Name</label>
+                        <input type="text" name="name" class="input-form" id="name1" placeholder="Kory Young">
+                    </div>
+                    <div id="email" class="k-form-section">
+                        <label for="email1">Email Address</label>
+                        <input type="email" name="email" class="input-form" id="email1" placeholder="youngkory@gmail.com">
+                    </div>
+                    <div id="message" class="k-form-section">
+                        <label for="message1">Message</label>
+                        <textarea name="message" class="input-form" id="message1"
+                            placeholder="Hello, I have a project I would like to discuss..."></textarea>
+                    </div>
+                    <div id="submit" class="k-form-section">
+                        <input type="button" value="SUBMIT" id="submit-btn">
+                    </div>
                 </div>
-                <div id="email" class="k-form-section">
-                    <label for="email1">Email Address</label>
-                    <input type="email" name="email" class="input-form" id="email1" placeholder="youngkory@gmail.com">
-                </div>
-                <div id="message" class="k-form-section">
-                    <label for="message1">Message</label>
-                    <textarea name="message" class="input-form" id="message1"
-                        placeholder="Hello, I have a project I would like to discuss..."></textarea>
-                </div>
-                <div id="submit" class="k-form-section">
-                    <input type="submit" value="SUBMIT" id="submit-btn">
+                <div id="thanks">
+                    <h2>Thank you!<br>I'll get back to you as soon as I can.</h2>
                 </div>
             </form>
             <div class="sm-icons">

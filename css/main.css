@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --x: 0.5;
+    --y: 0.5;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-y: scroll;
@@ -331,7 +336,7 @@ nav #k-nav a:hover::after {
 .home-arrow {
     position: absolute;
     right: 70px;
-    bottom: -90px;
+    bottom: 220px;
     opacity: 0;
     animation: title2 270ms ease-out forwards 3s;
     color: #d28782;
@@ -343,18 +348,19 @@ nav #k-nav a:hover::after {
     font-style: normal;
     font-size: 2250%;
     text-align: left;
+    text-shadow: 7px 0px 0px #eaeaea;
 }
 
 .home-title h1#design {
     position: absolute;
-    top: 64vh;
+    top: 30vh;
     opacity: 0;
     animation: title2 270ms ease-out forwards 2.25s;
 }
 
 .home-title h1#web {
     position: absolute;
-    top: 34vh;
+    top: 0vh;
     left: 3rem;
     opacity: 0;
     animation: title 9s ease-out infinite 2.25s;
@@ -362,14 +368,14 @@ nav #k-nav a:hover::after {
 
 .home-title h1#ui {
     position: absolute;
-    top: 34vh;
+    top: 0vh;
     opacity: 0;
     animation: title 9s ease-out infinite 5.25s;
 }
 
 .home-title h1#logo {
     position: absolute;
-    top: 34vh;
+    top: 0vh;
     opacity: 0;
     animation: title 9s ease-out infinite 8.25s;
 }
@@ -379,7 +385,7 @@ nav #k-nav a:hover::after {
     3%,
     30% {
         opacity: 1;
-        transform: translateY(-10rem);
+        transform: translateY(10rem);
     }
 
     33% {
@@ -388,7 +394,7 @@ nav #k-nav a:hover::after {
 
     36% {
         opacity: 0;
-        transform: translateY(-15rem);
+        transform: translateY(15rem);
     }
 
 }
@@ -397,7 +403,7 @@ nav #k-nav a:hover::after {
 
     100% {
         opacity: 1;
-        transform: translateY(-10rem);
+        transform: translateY(10rem);
     }
 
 }
@@ -479,7 +485,7 @@ nav #k-nav a:hover::after {
 
 .k-intro-icon {
     position: relative;
-    max-width: 200px;
+    max-width: 250px;
     border-radius: 50%;
     top: 400px;
     z-index: -1;
@@ -637,14 +643,13 @@ nav #k-nav a:hover::after {
     margin-left: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
 }
 
 .k-about-container h1 {
     font-size: 400%;
     text-align: left;
     grid-column: 1/3;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
     color: #d28782;
 }
 
@@ -660,6 +665,7 @@ nav #k-nav a:hover::after {
 }
 
 .k-about-container img {
+    max-height: 75vh;
     max-width: 100%;
     box-shadow: 1rem 1rem 0 0 #d28782;
     justify-self: right;
@@ -673,9 +679,7 @@ nav #k-nav a:hover::after {
     line-height: 3rem;
     display: grid;
     opacity: 1;
-    margin-top: 1rem;
-    margin-left: 7rem;
-    margin-right: 7rem;
+    margin-top: 4rem;
 }
 
 /* WORK */
@@ -692,51 +696,47 @@ nav #k-nav a:hover::after {
     text-align: left;
     grid-column: 1/3;
     color: #d28782;
+    margin-bottom: 7rem;
 }
 
 .work-display {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-}
-
-.work-display a {
-    padding-top: 7rem;
-}
-
-.work-display img {
-    box-shadow: 1rem 1rem 0 0 #d28782;
-    width: 100%;
+    gap: 7rem;
 }
 
 .work-image {
+    box-shadow: 1rem 1rem 0 0 #d28782;
+    overflow: hidden;
     position: relative;
 }
 
 .work-image img {
-    transition: all 200ms ease-out;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-duration: 1000ms;
+    scale: 1.2;
 }
 
 .work-image h3 {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 1rem;
+    right: 1rem;
     font-size: 450%;
     font-family: 'gravesend-sans', sans-serif;
-    opacity: 0;
+    opacity: 1;
     transition: all 200ms ease-out;
     text-align: center;
+    background-color: rgba(234, 234, 234, .7);  
+    padding: .5rem;
+    border-radius: 1rem;
 }
 
 .work-image:hover img {
-    opacity: .7;
-    transition: all 200ms ease-in;
-}
-
-.work-image:hover h3 {
-    opacity: 1;
-    transition: all 200ms ease-in;
+	transform: translate(calc(50px * var(--x)), calc(50px * var(--y)));
+    transition: transform 0.1s;
 }
 
 .pdfs {
@@ -744,7 +744,7 @@ nav #k-nav a:hover::after {
     width: 55vw;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-bottom: 7rem;
     margin-left: auto;
     margin-right: auto;
     gap: 10rem;
@@ -916,24 +916,51 @@ nav #k-nav a:hover::after {
     max-width: 100%;
 }
 
+#wsub-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    border: 1px solid red;
+}
+
+#g1-l, #g2-l, #g3-l, #g4-l {
+    position: fixed;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    box-shadow: 1rem 1rem 0 0 #d28782;
+    display: none;
+    border: 1px solid red;
+}
+
+#g1-s, #g2-s, #g3-s, #g4-s {
+    cursor: pointer;
+}
+
 .wsub-nav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
     margin-top: 5rem;
 }
 
 .wsub-nav a {
     outline: none;
     border: none;
-    border-radius: 1rem;
+    border-radius: .4rem;
     background-color: #d28782;
-    box-shadow: 0 1rem 0 rgb(190, 115, 110);
+    box-shadow: 0 .75rem 0 rgb(190, 115, 110);
     color: #eaeaea;
-    width: 25rem;
-    height: 10rem;
+    width: 16rem;
+    height: 4rem;
     margin: 0 auto;
-    font-size: 500%;
+    font-size: 200%;
     font-family: 'gravesend-sans', sans-serif;
     display: flex;
     text-align: center;
@@ -955,6 +982,11 @@ nav #k-nav a:hover::after {
 /* FORM */
 
 .k-form {
+    display: grid;
+    position: relative;
+}
+
+.k-form #form-input {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -1034,6 +1066,16 @@ nav #k-nav a:hover::after {
     transform: translateY(.3rem);
 }
 
+.k-form #thanks {
+    position: absolute;
+    grid-column: 1/3;
+    justify-self: center;
+    font-size: 300%;
+    text-align: center;
+    opacity: 0;
+    z-index: -1;
+}
+
 .sm-icons {
     width: 77%;
     display: flex;
@@ -1098,6 +1140,90 @@ nav #k-nav a:hover::after {
 
 /* MEDIA QUERIES */
 
+/* LAPTOP */
+@media screen and (max-width: 1440px) {
+
+        /* BANNER */
+        #banner-l {
+            left: -36.6%;
+        }
+    
+        #banner-r {
+            right: -36.6%;
+        }
+    
+        @keyframes bannerL {
+    
+            15% {
+                left: -47%;
+            }
+    
+            50% {
+                left: -47%;
+            }
+    
+            99% {
+                left: -110%;
+                opacity: 1;
+                height: 101vh;
+            }
+    
+            100% {
+                opacity: 0;
+                height: 0;
+            }
+    
+        }
+    
+        @keyframes bannerR {
+    
+            15% {
+                right: -50%;
+            }
+    
+            50% {
+                right: -50%;
+            }
+    
+            99% {
+                right: -110%;
+                opacity: 1;
+                height: 101vh;
+            }
+    
+            100% {
+                opacity: 0;
+                height: 0;
+            }
+    
+        }
+
+    /* HOME */
+    .home-title h1 {
+        font-size: 1950%;
+    }
+
+    /* ABOUT */
+    .k-about-container {
+        max-width: 70vw;
+    }
+
+    .k-about-container h2 {
+        font-size: 1000%;
+    }
+
+    .work-container,
+    .pdfs {
+        max-width: 70vw;
+    }
+
+    .work-display {
+        width: 70vw;
+    }
+    
+}
+
+
 /* TABLET */
 @media screen and (max-width: 1080px) {
 
@@ -1113,11 +1239,11 @@ nav #k-nav a:hover::after {
     @keyframes bannerL {
 
         15% {
-            left: -64%;
+            left: -70%;
         }
 
         50% {
-            left: -64%;
+            left: -70%;
         }
 
         99% {
@@ -1136,11 +1262,11 @@ nav #k-nav a:hover::after {
     @keyframes bannerR {
 
         15% {
-            right: -64%;
+            right: -70%;
         }
 
         50% {
-            right: -64%;
+            right: -70%;
         }
 
         99% {
@@ -1159,7 +1285,7 @@ nav #k-nav a:hover::after {
     /* HOME */
     .home-arrow {
         right: 35px;
-        bottom: -125px;
+        bottom: 190px;
     }
 
     .home-title {
@@ -1216,16 +1342,11 @@ nav #k-nav a:hover::after {
 
     .k-about-container h1 {
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
     }
 
     .k-about-container h2 {
         font-size: 1000%;
-    }
-
-    .k-about-container #bio {
-        margin-left: 0;
-        margin-right: 0;
     }
 
     /* WORK */
@@ -1235,7 +1356,7 @@ nav #k-nav a:hover::after {
 
     .work-container h1 {
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
     }
 
     .work-container,
@@ -1247,32 +1368,27 @@ nav #k-nav a:hover::after {
         width: 90vw;
     }
 
-    .work-display a {
-        padding-top: 4rem;
+    .work-image {
+        position: relative;
     }
 
-    .work-display img {
+    .work-image img {
         width: 90vw;
-        margin-left: auto;
-        margin-right: auto;
+        scale: 1.02;
+    }
+
+    .work-image:hover img {
+        transform: translate(0,0);
+
     }
 
     .work-image h3 {
         font-size: 300%;
-        opacity: 1;
-        background-color: rgba(234, 234, 234, .7);
-        padding: .5rem;
-        border-radius: 1rem;
-        top: auto;
-        left: auto;
-        transform: translate(0, 0);
-        bottom: 1rem;
-        right: 1rem;
     }
 
     .pdfs {
         width: 95%;
-        margin-top: 7rem;
+        margin-bottom: 6rem;
     }
 
     /* WORK SUBPAGE */
@@ -1512,27 +1628,23 @@ nav #k-nav a:hover::after {
     }
 
     .home-title h1#design {
-        top: 38vh;
+        top: 23vh;
         left: .5rem;
-        animation-delay: 0s;
     }
 
     .home-title h1#web {
-        top: 22vh;
+        top: 7vh;
         left: .75rem;
-        animation-delay: 0s;
     }
 
     .home-title h1#ui {
-        top: 22vh;
+        top: 7vh;
         left: .75rem;
-        animation-delay: 3s;
     }
 
     .home-title h1#logo {
-        top: 22vh;
+        top: 7vh;
         left: .5rem;
-        animation-delay: 6s;
     }
 
     @keyframes title {
@@ -1540,7 +1652,7 @@ nav #k-nav a:hover::after {
         3%,
         30% {
             opacity: 1;
-            transform: translateY(-5rem);
+            transform: translateY(5rem);
         }
 
         33% {
@@ -1549,7 +1661,7 @@ nav #k-nav a:hover::after {
 
         36% {
             opacity: 0;
-            transform: translateY(-10rem);
+            transform: translateY(10rem);
         }
 
     }
@@ -1558,7 +1670,7 @@ nav #k-nav a:hover::after {
 
         100% {
             opacity: 1;
-            transform: translateY(-5rem);
+            transform: translateY(5rem);
         }
 
     }
@@ -1592,10 +1704,26 @@ nav #k-nav a:hover::after {
 
     .k-intro-grid h1 {
         font-size: 400%;
+        opacity: 0;
+        transform: translateY(-5rem);
+        animation: title3 270ms ease-out forwards 2.25s;
+
     }
 
     .k-intro-grid h2 {
         font-size: 350%;
+        opacity: 0;
+        transform: translateY(-5rem);
+        animation: title3 270ms ease-out forwards 2.25s;
+    }
+
+    @keyframes title3 {
+        
+        to {
+            opacity: 1;
+            transform: translateY(0rem);
+        }
+
     }
 
     .k-intro-grid p {
@@ -1715,16 +1843,6 @@ nav #k-nav a:hover::after {
     .wsub-image-wide img {
         box-shadow: .75rem .75rem 0 0 #d28782;
     }
-
-    .wsub-nav a {
-        border-radius: 1rem;
-        box-shadow: 0 1rem 0 rgb(190, 115, 110);
-        width: 20rem;
-        height: 7rem;
-        margin: 0 auto;
-        font-size: 400%;
-    }
-
 }
 
 /* PHONE */
@@ -1799,19 +1917,19 @@ nav #k-nav a:hover::after {
     }
 
     .home-title h1#design {
-        top: 35vh;
+        top: 20vh;
     }
 
     .home-title h1#web {
-        top: 25vh;
+        top: 10vh;
     }
 
     .home-title h1#ui {
-        top: 25vh;
+        top: 10vh;
     }
 
     .home-title h1#logo {
-        top: 25vh;
+        top: 10vh;
     }
 
     .home-image {
@@ -1852,8 +1970,13 @@ nav #k-nav a:hover::after {
     }
 
     /* HOMEPAGE WORK */
+    .k-portfolio {
+        margin-top: 7rem;
+        margin-bottom: 7rem;
+    }
+
     .k-portfolio h1 {
-        font-size: 400%;
+        font-size: 300%;
     }
 
     /* HOMEPAGE CONTACT */
@@ -1883,6 +2006,7 @@ nav #k-nav a:hover::after {
     .k-about-container h1 {
         grid-row: 1/2;
         width: 90vw;
+        margin-bottom: 3rem;
     }
 
     .k-about-container h2 {
@@ -1892,6 +2016,7 @@ nav #k-nav a:hover::after {
 
     .k-about-container #bio {
         font-size: 150%;
+        line-height: 2.5rem;
         width: 90vw;
         grid-row: 4/5;
     }
@@ -1905,11 +2030,11 @@ nav #k-nav a:hover::after {
 
     /* WORK */
 
-    .work-display a {
-        padding-top: 3rem;
+    .work-display {
+        margin-top: 5rem;
     }
 
-    .work-display img {
+    .work-image img {
         box-shadow: .75rem .75rem 0 0 #d28782;
     }
 
@@ -1934,16 +2059,16 @@ nav #k-nav a:hover::after {
     }
 
     .wsub-text h1 {
-        font-size: 525%;
+        font-size: 375%;
     }
 
     .wsub-text h2 {
-        font-size: 115%;
+        font-size: 100%;
         padding-left: 7px;
     }
 
     .wsub-text #wst {
-        font-size: 115%;
+        font-size: 100%;
         padding-left: 7px;
     }
 
@@ -1967,11 +2092,14 @@ nav #k-nav a:hover::after {
         margin-right: .5rem;
     }
 
+    .wsub-nav {
+        width: 100%;
+    }
+
     .wsub-nav a {
-        box-shadow: 0 .75rem 0 rgb(190, 115, 110);
+        box-shadow: 0 .5rem 0 rgb(190, 115, 110);
         width: 10rem;
         height: 4rem;
-        font-size: 200%;
     }
 
     /* CONTACT */
