@@ -1145,21 +1145,21 @@ nav #k-nav a:hover::after {
 
         /* BANNER */
         #banner-l {
-            left: -36.6%;
+            left: -26%;
         }
     
         #banner-r {
-            right: -36.6%;
+            right: -26%;
         }
     
         @keyframes bannerL {
     
             15% {
-                left: -47%;
+                left: -37%;
             }
     
             50% {
-                left: -47%;
+                left: -37%;
             }
     
             99% {
@@ -1178,11 +1178,11 @@ nav #k-nav a:hover::after {
         @keyframes bannerR {
     
             15% {
-                right: -50%;
+                right: -37%;
             }
     
             50% {
-                right: -50%;
+                right: -37%;
             }
     
             99% {
