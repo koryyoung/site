@@ -747,7 +747,6 @@ nav #k-nav a:hover::after {
     margin-bottom: 7rem;
     margin-left: auto;
     margin-right: auto;
-    gap: 10rem;
 }
 
 .pdfs a {
@@ -839,6 +838,7 @@ nav #k-nav a:hover::after {
 .wsub-text h2 {
     font-size: 125%;
     padding-left: 10px;
+    line-height: 115%;
 }
 
 .wsub-text #wst {
@@ -982,7 +982,8 @@ nav #k-nav a:hover::after {
 /* FORM */
 
 .k-form {
-    display: grid;
+    /* display: grid; */
+    display: none;
     position: relative;
 }
 
